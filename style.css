@@ -52,3 +52,14 @@ h3 {
     margin-top: 50px;
     padding: 5px 10px;
 }
+
+.btn-jogar{
+    padding: 8px 15px;
+    border: 0;
+    background: var(--primary-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 1em;
+}
