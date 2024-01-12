@@ -11,7 +11,6 @@ function onSpeak(e) {
     let guess = e.results[0][0].transcript
     displayGuess(guess)
     verify(guess)
-    console.log(guess)
 }
 
 function displayGuess(guess) {
