@@ -36,18 +36,18 @@ function verify(guess) {
         case "cem":
             guess = 100
             break;
-    }
-    const numberRandom = +guess
+    };
+    const numberRandom = +guess;
 
     if (guessInvalid(numberRandom)) {
         elementGuess.innerHTML += '<div>Números...Me diga números! &#x1F921</div>'
-        return
-    }
+        return;
+    };
 
     if (maxNumber(numberRandom)) {
-        elementGuess.innerHTML += `<div>Oxi...É entre ${lowerValue} e ${higherValue}! &#x1F923 &#x1F923 &#x1F923</div>`
-        return
-    }
+        elementGuess.innerHTML += `<div>Oxi...É entre ${lowerValue} e ${higherValue}! &#x1F923 &#x1F923 &#x1F923</div>`;
+        return;
+    };
 
     if (numberRandom === secretNumber){
         document.body.innerHTML = `
@@ -60,19 +60,19 @@ function verify(guess) {
         elementGuess.innerHTML += '<div>O número secreto é menor <i class="fa-solid fa-arrow-down"></i></div>'
     } else {
         elementGuess.innerHTML += '<div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>'
-    }
+    };
 
-}
+};
 
 function guessInvalid(numberRandom) {
-    return Number.isNaN(numberRandom)
-}
+    return Number.isNaN(numberRandom);
+};
 
 function maxNumber(numberRandom){
-    return numberRandom > higherValue || numberRandom < lowerValue
-}
+    return numberRandom > higherValue || numberRandom < lowerValue;
+};
 
 document.body.addEventListener('click', e => {
-    if (e.target.id == 'play-again')
-    window.location.reload()
-})
+    if (e.target.id == 'play-again');
+    window.location.reload();
+});
